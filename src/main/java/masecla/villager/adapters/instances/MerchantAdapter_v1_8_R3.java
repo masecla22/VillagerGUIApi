@@ -70,7 +70,6 @@ public class MerchantAdapter_v1_8_R3 extends BaseAdapter implements IMerchant {
 
 	@Override
 	public void a_(EntityHuman arg0) {
-		toAdapt.getForWho().sendMessage("Called a_ EntityHuman");
 		if (arg0 == null) {
 			VillagerInventoryCloseEvent event = new VillagerInventoryCloseEvent(toAdapt, toAdapt.getForWho());
 			Bukkit.getServer().getPluginManager().callEvent(event);
@@ -85,7 +84,6 @@ public class MerchantAdapter_v1_8_R3 extends BaseAdapter implements IMerchant {
 	public void a_(net.minecraft.server.v1_8_R3.ItemStack arg0) {
 		VillagerInventoryModifyEvent event = new VillagerInventoryModifyEvent(toAdapt, toAdapt.getForWho(),
 				CraftItemStack.asBukkitCopy(arg0));
-		this.toAdapt.getForWho().sendMessage("Test: " + CraftItemStack.asBukkitCopy(arg0));
 		Bukkit.getServer().getPluginManager().callEvent(event);
 	}
 
