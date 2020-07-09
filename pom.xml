@@ -34,6 +34,14 @@
 			</systemPath>
 		</dependency>
 		<dependency>
+			<groupId>org.spigot1.11.2</groupId>
+			<artifactId>craftbukkit1.11.2</artifactId>
+			<version>1.11.2</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/lib/spigot-1.11.2.jar
+			</systemPath>
+		</dependency>
+		<dependency>
 			<groupId>org.spigot1.10.2</groupId>
 			<artifactId>craftbukkit1.10.2</artifactId>
 			<version>1.10.2</version>
