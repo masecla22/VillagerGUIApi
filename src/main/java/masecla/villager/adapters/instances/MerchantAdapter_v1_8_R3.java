@@ -2,8 +2,8 @@ package masecla.villager.adapters.instances;
 
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
-import org.bukkit.craftbukkit.v1_8_R2.entity.CraftPlayer;
-import org.bukkit.craftbukkit.v1_8_R2.inventory.CraftItemStack;
+import org.bukkit.craftbukkit.v1_8_R3.entity.CraftPlayer;
+import org.bukkit.craftbukkit.v1_8_R3.inventory.CraftItemStack;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 
@@ -14,16 +14,16 @@ import masecla.villager.events.VillagerInventoryCloseEvent;
 import masecla.villager.events.VillagerInventoryModifyEvent;
 import masecla.villager.events.VillagerInventoryOpenEvent;
 import masecla.villager.events.VillagerTradeCompleteEvent;
-import net.minecraft.server.v1_8_R2.ChatComponentText;
-import net.minecraft.server.v1_8_R2.EntityHuman;
-import net.minecraft.server.v1_8_R2.IChatBaseComponent;
-import net.minecraft.server.v1_8_R2.IMerchant;
-import net.minecraft.server.v1_8_R2.MerchantRecipe;
-import net.minecraft.server.v1_8_R2.MerchantRecipeList;
+import net.minecraft.server.v1_8_R3.MerchantRecipe;
+import net.minecraft.server.v1_8_R3.ChatComponentText;
+import net.minecraft.server.v1_8_R3.EntityHuman;
+import net.minecraft.server.v1_8_R3.IChatBaseComponent;
+import net.minecraft.server.v1_8_R3.IMerchant;
+import net.minecraft.server.v1_8_R3.MerchantRecipeList;
 
-public class MerchantAdapter_v1_8_R2 extends BaseAdapter implements IMerchant {
+public class MerchantAdapter_v1_8_R3 extends BaseAdapter implements IMerchant {
 
-	public MerchantAdapter_v1_8_R2(VillagerInventory toAdapt) {
+	public MerchantAdapter_v1_8_R3(VillagerInventory toAdapt) {
 		super(toAdapt);
 	}
 
@@ -41,9 +41,9 @@ public class MerchantAdapter_v1_8_R2 extends BaseAdapter implements IMerchant {
 		MerchantRecipeList rpl = new MerchantRecipeList();
 		for (VillagerTrade trd : toAdapt.getTrades()) {
 			MerchantRecipe toAdd = null;
-			net.minecraft.server.v1_8_R2.ItemStack itm1 = CraftItemStack.asNMSCopy(trd.getItemOne());
-			net.minecraft.server.v1_8_R2.ItemStack itm2 = null;
-			net.minecraft.server.v1_8_R2.ItemStack result = CraftItemStack.asNMSCopy(trd.getResult());
+			net.minecraft.server.v1_8_R3.ItemStack itm1 = CraftItemStack.asNMSCopy(trd.getItemOne());
+			net.minecraft.server.v1_8_R3.ItemStack itm2 = null;
+			net.minecraft.server.v1_8_R3.ItemStack result = CraftItemStack.asNMSCopy(trd.getResult());
 			if (trd.requiresTwoItems())
 				itm2 = CraftItemStack.asNMSCopy(trd.getItemTwo());
 			else
@@ -70,6 +70,7 @@ public class MerchantAdapter_v1_8_R2 extends BaseAdapter implements IMerchant {
 
 	@Override
 	public void a_(EntityHuman arg0) {
+		toAdapt.getForWho().sendMessage("Called a_ EntityHuman");
 		if (arg0 == null) {
 			VillagerInventoryCloseEvent event = new VillagerInventoryCloseEvent(toAdapt, toAdapt.getForWho());
 			Bukkit.getServer().getPluginManager().callEvent(event);
@@ -81,9 +82,10 @@ public class MerchantAdapter_v1_8_R2 extends BaseAdapter implements IMerchant {
 	 * Enough to send an update event with the result.
 	 */
 	@Override
-	public void a_(net.minecraft.server.v1_8_R2.ItemStack arg0) {
+	public void a_(net.minecraft.server.v1_8_R3.ItemStack arg0) {
 		VillagerInventoryModifyEvent event = new VillagerInventoryModifyEvent(toAdapt, toAdapt.getForWho(),
 				CraftItemStack.asBukkitCopy(arg0));
+		this.toAdapt.getForWho().sendMessage("Test: " + CraftItemStack.asBukkitCopy(arg0));
 		Bukkit.getServer().getPluginManager().callEvent(event);
 	}
 
