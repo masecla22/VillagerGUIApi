@@ -26,6 +26,46 @@
 	</repositories>
 	<dependencies>
 		<dependency>
+			<groupId>org.spigot1.16.1</groupId>
+			<artifactId>craftbukkit1.16.1</artifactId>
+			<version>1.16.1</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/lib/spigot-1.16.1.jar
+			</systemPath>
+		</dependency>
+		<dependency>
+			<groupId>org.spigot1.15.2</groupId>
+			<artifactId>craftbukkit1.15.2</artifactId>
+			<version>1.15.2</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/lib/spigot-1.15.2.jar
+			</systemPath>
+		</dependency>
+		<dependency>
+			<groupId>org.spigot1.14.4</groupId>
+			<artifactId>craftbukkit1.14.4</artifactId>
+			<version>1.14.4</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/lib/spigot-1.14.4.jar
+			</systemPath>
+		</dependency>
+		<dependency>
+			<groupId>org.spigot1.13.2</groupId>
+			<artifactId>craftbukkit1.13.2</artifactId>
+			<version>1.13.2</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/lib/spigot-1.13.2.jar
+			</systemPath>
+		</dependency>
+		<dependency>
+			<groupId>org.spigot1.13</groupId>
+			<artifactId>craftbukkit1.13</artifactId>
+			<version>1.13</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/lib/spigot-1.13.jar
+			</systemPath>
+		</dependency>
+		<dependency>
 			<groupId>org.spigot1.12.2</groupId>
 			<artifactId>craftbukkit1.12.2</artifactId>
 			<version>1.12.2</version>
