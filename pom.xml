@@ -31,7 +31,7 @@
 			<version>1.16.1</version>
 			<scope>system</scope>
 			<systemPath>${project.basedir}/lib/spigot-1.16.1.jar
-			</systemPath>
+			</systemPath>  
 		</dependency>
 		<dependency>
 			<groupId>org.spigot1.15.2</groupId>
@@ -112,8 +112,8 @@
 			<scope>system</scope>
 			<systemPath>${project.basedir}/lib/spigot-1.8.8.jar
 			</systemPath>
-		</dependency>
-		<dependency>
+		</dependency>  
+		<dependency> 
 			<groupId>org.spigot1.8.3</groupId>
 			<artifactId>craftbukkit1.8.3</artifactId>
 			<version>1.8.3</version>

@@ -19,6 +19,10 @@ public class VillagerInventory {
 		this.forWho = forWho;
 	}
 
+	public VillagerInventory() {
+
+	}
+
 	public Player getForWho() {
 		return forWho;
 	}
