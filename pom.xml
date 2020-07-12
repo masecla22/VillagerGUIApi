@@ -210,6 +210,22 @@
 			</systemPath>
 		</dependency>
 		<dependency>
+			<groupId>org.spigot1.4.7</groupId>
+			<artifactId>craftbukkit1.4.7</artifactId>
+			<version>1.4.7</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/lib/spigot-1.4.7.jar
+			</systemPath>
+		</dependency>
+		<dependency>
+			<groupId>org.spigot1.4.6</groupId>
+			<artifactId>craftbukkit1.4.6</artifactId>
+			<version>1.4.6</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/lib/spigot-1.4.6.jar
+			</systemPath>
+		</dependency>
+		<dependency>
 			<groupId>org.spigotmc</groupId>
 			<artifactId>spigot-api</artifactId>
 			<version>1.12.2-R0.1-SNAPSHOT</version>
