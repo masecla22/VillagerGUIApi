@@ -65,7 +65,7 @@ public class MainLoader extends JavaPlugin {
 				trades.add(new VillagerTrade(new ItemStack(Material.DIRT), new ItemStack(Material.DIRT),
 						new ItemStack(Material.GLASS), 10));
 				trades.add(new VillagerTrade(new ItemStack(Material.DIRT), new ItemStack(Material.GLASS), 15));
-				trades.add(new VillagerTrade(new ItemStack(Material.ANVIL), new ItemStack(Material.GLASS), 10));
+				trades.add(new VillagerTrade(new ItemStack(Material.GLASS), new ItemStack(Material.GLASS), 10));
 
 				VillagerInventory cr = new VillagerInventory(trades, event.getPlayer());
 

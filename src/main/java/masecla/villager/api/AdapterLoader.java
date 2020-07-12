@@ -3,11 +3,13 @@ package masecla.villager.api;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.OutputStream;
 import java.net.URL;
 import java.net.URLClassLoader;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Properties;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipException;
 import java.util.zip.ZipFile;
@@ -29,7 +31,25 @@ public class AdapterLoader {
 
 	public String getVersion() {
 		String v = Bukkit.getServer().getClass().getPackage().getName();
-		return v.substring(v.lastIndexOf('.') + 1);
+		v = v.substring(v.lastIndexOf('.') + 1);
+		if (!v.equals("craftbukkit"))
+			return v;
+		else {
+			String result = "UNK";
+			InputStream stream = Bukkit.class.getClassLoader()
+					.getResourceAsStream("META-INF/maven/org.bukkit/bukkit/pom.properties");
+			Properties properties = new Properties();
+			if (stream != null) {
+				try {
+					properties.load(stream);
+					result = properties.getProperty("version");
+					result = "v" + result.split("-")[0].replace('.', '_');
+				} catch (IOException ex) {
+					return "UNK";
+				}
+			}
+			return result;
+		}
 	}
 
 	public List<ZipEntry> getAdapterEntries(ZipFile f) {
