@@ -5,7 +5,7 @@ import java.util.List;
 
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
-import org.bukkit.craftbukkit.v1_14_R1.inventory.CraftMerchantCustom;
+import org.bukkit.craftbukkit.v1_15_R1.inventory.CraftMerchantCustom;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.HandlerList;
@@ -23,11 +23,11 @@ import masecla.villager.events.VillagerInventoryModifyEvent;
 import masecla.villager.events.VillagerInventoryOpenEvent;
 import masecla.villager.events.VillagerTradeCompleteEvent;
 
-public class MerchantAdapter_v1_14_R1 extends BaseAdapter implements Listener {
+public class MerchantAdapter_v1_15_R1 extends BaseAdapter implements Listener {
 
 	private CraftMerchantCustom wrapped = null;
 
-	public MerchantAdapter_v1_14_R1(VillagerInventory toAdapt) {
+	public MerchantAdapter_v1_15_R1(VillagerInventory toAdapt) {
 		super(toAdapt);
 		// TODO: Get rid of this magical value here somehow
 		Bukkit.getServer().getPluginManager().registerEvents(this,

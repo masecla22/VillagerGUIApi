@@ -28,7 +28,6 @@ public class MerchantAdapter_v1_13_R1 extends BaseAdapter implements IMerchant {
 
 	public MerchantAdapter_v1_13_R1(VillagerInventory toAdapt) {
 		super(toAdapt);
-
 	}
 
 	@Override
