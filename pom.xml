@@ -31,7 +31,7 @@
 			<version>1.16.1</version>
 			<scope>system</scope>
 			<systemPath>${project.basedir}/lib/spigot-1.16.1.jar
-			</systemPath>  
+			</systemPath>
 		</dependency>
 		<dependency>
 			<groupId>org.spigot1.15.2</groupId>
@@ -112,8 +112,8 @@
 			<scope>system</scope>
 			<systemPath>${project.basedir}/lib/spigot-1.8.8.jar
 			</systemPath>
-		</dependency>  
-		<dependency> 
+		</dependency>
+		<dependency>
 			<groupId>org.spigot1.8.3</groupId>
 			<artifactId>craftbukkit1.8.3</artifactId>
 			<version>1.8.3</version>
@@ -127,6 +127,86 @@
 			<version>1.8</version>
 			<scope>system</scope>
 			<systemPath>${project.basedir}/lib/spigot-1.8.jar
+			</systemPath>
+		</dependency>
+		<dependency>
+			<groupId>org.spigot1.7.10</groupId>
+			<artifactId>craftbukkit1.7.10</artifactId>
+			<version>1.7.10</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/lib/spigot-1.7.10.jar
+			</systemPath>
+		</dependency>
+		<dependency>
+			<groupId>org.spigot1.7.9</groupId>
+			<artifactId>craftbukkit1.7.9</artifactId>
+			<version>1.7.9</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/lib/spigot-1.7.9.jar
+			</systemPath>
+		</dependency>
+		<dependency>
+			<groupId>org.spigot1.7.5</groupId>
+			<artifactId>craftbukkit1.7.5</artifactId>
+			<version>1.7.5</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/lib/spigot-1.7.5.jar
+			</systemPath>
+		</dependency>
+		<dependency>
+			<groupId>org.spigot1.7.2</groupId>
+			<artifactId>craftbukkit1.7.2</artifactId>
+			<version>1.7.2</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/lib/spigot-1.7.2.jar
+			</systemPath>
+		</dependency>
+		<dependency>
+			<groupId>org.spigot1.6.4</groupId>
+			<artifactId>craftbukkit1.6.4</artifactId>
+			<version>1.6.4</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/lib/spigot-1.6.4.jar
+			</systemPath>
+		</dependency>
+		<dependency>
+			<groupId>org.spigot1.6.2</groupId>
+			<artifactId>craftbukkit1.6.2</artifactId>
+			<version>1.6.2</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/lib/spigot-1.6.2.jar
+			</systemPath>
+		</dependency>
+		<dependency>
+			<groupId>org.spigot1.6.1</groupId>
+			<artifactId>craftbukkit1.6.1</artifactId>
+			<version>1.6.1</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/lib/spigot-1.6.1.jar
+			</systemPath>
+		</dependency>
+		<dependency>
+			<groupId>org.spigot1.5.2</groupId>
+			<artifactId>craftbukkit1.5.2</artifactId>
+			<version>1.5.2</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/lib/spigot-1.5.2.jar
+			</systemPath>
+		</dependency>
+		<dependency>
+			<groupId>org.spigot1.5.1</groupId>
+			<artifactId>craftbukkit1.5.1</artifactId>
+			<version>1.5.1</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/lib/spigot-1.5.1.jar
+			</systemPath>
+		</dependency>
+		<dependency>
+			<groupId>org.spigot1.5</groupId>
+			<artifactId>craftbukkit1.5</artifactId>
+			<version>1.5</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/lib/spigot-1.5.jar
 			</systemPath>
 		</dependency>
 		<dependency>

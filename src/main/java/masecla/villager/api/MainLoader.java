@@ -1,12 +1,20 @@
 package masecla.villager.api;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
+import org.bukkit.ChatColor;
+import org.bukkit.Material;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
+import org.bukkit.event.player.PlayerCommandPreprocessEvent;
+import org.bukkit.inventory.ItemStack;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import masecla.villager.adapters.BaseAdapter;
+import masecla.villager.classes.VillagerInventory;
+import masecla.villager.classes.VillagerTrade;
 import masecla.villager.events.VillagerInventoryCloseEvent;
 import masecla.villager.events.VillagerInventoryModifyEvent;
 import masecla.villager.events.VillagerInventoryOpenEvent;
@@ -47,6 +55,23 @@ public class MainLoader extends JavaPlugin {
 			@EventHandler
 			public void onOpen(VillagerInventoryOpenEvent event) {
 				event.getPlayer().sendMessage("Opened an inventory!");
+			}
+
+			@EventHandler
+			public void onChat(PlayerCommandPreprocessEvent event) {
+				if (!event.getMessage().contains("test"))
+					return;
+				List<VillagerTrade> trades = new ArrayList<>();
+				trades.add(new VillagerTrade(new ItemStack(Material.DIRT), new ItemStack(Material.DIRT),
+						new ItemStack(Material.GLASS), 10));
+				trades.add(new VillagerTrade(new ItemStack(Material.DIRT), new ItemStack(Material.GLASS), 15));
+				trades.add(new VillagerTrade(new ItemStack(Material.ANVIL), new ItemStack(Material.GLASS), 10));
+
+				VillagerInventory cr = new VillagerInventory(trades, event.getPlayer());
+
+				cr.setName(ChatColor.translateAlternateColorCodes('&', "&4&lfUcKinG TeStInG"));
+
+				cr.open();
 			}
 
 		}, this);
