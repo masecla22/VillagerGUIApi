@@ -1,4 +1,4 @@
-image::https://api.bintray.com/packages/masecla22/VillagerGUIApi/VillagerGUIApi/images/download.svg[link="https://bintray.com/masecla22/VillagerGUIApi/VillagerGUIApi/_latestVersion"]
+[![Discord](https://img.shields.io/discord/459964296143699970.svg?label=&logo=discord&logoColor=ffffff&color=7389D8&labelColor=6A7EC2)](https://discord.gg/FdMjWSP)
 
 # VillagerGUI Api
 Have you ever tried to create a custom Villager GUI without a villager in Spigot? You probably noticed the absolute insanity that it involves, and the complete and utter inability to port it to other versions. This library intends to fix this by having custom classes for easy access and events to create your personalized GUIs!
