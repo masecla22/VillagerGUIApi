@@ -44,20 +44,20 @@ Here is an example of opening an inventory for a player with 3 trades. (The exam
 ```java
     List<VillagerTrade> trades = new ArrayList<>(); // Create a new list of items
     // Create a trade with 1 DIRT and 1 DIRT for GLASS with 10 max uses
-	trades.add(new VillagerTrade(new ItemStack(Material.DIRT), new ItemStack(Material.DIRT),
-			new ItemStack(Material.GLASS), 10));
-	// Create a trade for 1 DIRT for 1 GLASS with 15 max uses
-	trades.add(new VillagerTrade(new ItemStack(Material.DIRT), new ItemStack(Material.GLASS), 15));
-	// Create a trade for 1 ANVIL for 1 GLASS with 10 max uses 
-	trades.add(new VillagerTrade(new ItemStack(Material.ANVIL), new ItemStack(Material.GLASS), 10));
-	// Create the object
-	VillagerInventory cr = new VillagerInventory(trades, p);
-	
-	// Set the top title
-	cr.setName(ChatColor.translateAlternateColorCodes('&', "&aHello"));
-	
-	// Open for player
-	cr.open();
+    trades.add(new VillagerTrade(new ItemStack(Material.DIRT), new ItemStack(Material.DIRT),
+            new ItemStack(Material.GLASS), 10));
+    // Create a trade for 1 DIRT for 1 GLASS with 15 max uses
+    trades.add(new VillagerTrade(new ItemStack(Material.DIRT), new ItemStack(Material.GLASS), 15));
+    // Create a trade for 1 ANVIL for 1 GLASS with 10 max uses 
+    trades.add(new VillagerTrade(new ItemStack(Material.ANVIL), new ItemStack(Material.GLASS), 10));
+    // Create the object
+    VillagerInventory cr = new VillagerInventory(trades, p);
+    
+    // Set the top title
+    cr.setName(ChatColor.translateAlternateColorCodes('&', "&aHello"));
+    
+    // Open for player
+    cr.open();
 ```
 
 

@@ -6,6 +6,8 @@ import java.io.IOException;
 import java.io.OutputStream;
 import java.net.URL;
 import java.net.URLClassLoader;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipException;
 import java.util.zip.ZipFile;
@@ -30,9 +32,21 @@ public class AdapterLoader {
 		return v.substring(v.lastIndexOf('.') + 1);
 	}
 
-	public ZipEntry getAdapterEntry(ZipFile f) {
+	public List<ZipEntry> getAdapterEntries(ZipFile f) {
+		List<ZipEntry> result = new ArrayList<>();
 		String name = "masecla/villager/adapters/instances/MerchantAdapter_" + getVersion() + ".class";
-		return f.getEntry(name);
+		if (f.getEntry(name) != null)
+			result.add(f.getEntry(name));
+		int i = 1;
+		while (true) {
+			ZipEntry tested = f.getEntry(name.replace(".class", "$" + i + ".class"));
+			if (tested != null)
+				result.add(tested);
+			else
+				break;
+			i++;
+		}
+		return result;
 	}
 
 	public void reflectivelyLoad()
@@ -40,22 +54,24 @@ public class AdapterLoader {
 		File tmpFile = new File(plugin.getDataFolder().getAbsolutePath() + File.separator + "adapters.zip");
 		plugin.saveResource("adapters.zip", true);
 		ZipFile f = new ZipFile(tmpFile);
-		ZipEntry correctClass = getAdapterEntry(f);
+		List<ZipEntry> correctClasses = getAdapterEntries(f);
+		for (ZipEntry correctClass : correctClasses) {
+			File tmpDir = new File(
+					File.separator + plugin.getDataFolder().getAbsolutePath() + File.separator + "masecla"
+							+ File.separator + "villager" + File.separator + "adapters" + File.separator + "instances");
+			tmpDir.mkdirs();
 
-		File tmpDir = new File(File.separator + plugin.getDataFolder().getAbsolutePath() + File.separator + "masecla"
-				+ File.separator + "villager" + File.separator + "adapters" + File.separator + "instances");
-		tmpDir.mkdirs();
+			System.out.println("Loading " + correctClass.getName());
+			File tmpClass = new File(File.separator + plugin.getDataFolder().getAbsolutePath() + File.separator
+					+ correctClass.getName());
 
-		File tmpClass = new File(File.separator + plugin.getDataFolder().getAbsolutePath() + File.separator + "masecla"
-				+ File.separator + "villager" + File.separator + "adapters" + File.separator + "instances"
-				+ File.separator + "MerchantAdapter_" + getVersion() + ".class");
+			byte[] buffer = new byte[(int) correctClass.getSize()];
+			f.getInputStream(correctClass).read(buffer);
 
-		byte[] buffer = new byte[(int) correctClass.getSize()];
-		f.getInputStream(correctClass).read(buffer);
-
-		OutputStream result = new FileOutputStream(tmpClass);
-		result.write(buffer);
-		result.close();
+			OutputStream result = new FileOutputStream(tmpClass);
+			result.write(buffer);
+			result.close();
+		}
 
 		this.classLoader = new URLClassLoader(new URL[] { plugin.getDataFolder().toURI().toURL() },
 				this.getClass().getClassLoader());
