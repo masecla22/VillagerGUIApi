@@ -60,6 +60,14 @@
 		</repository>
 	</repositories>
 	<dependencies>
+	    <dependency>
+			<groupId>org.spigot1.16.4</groupId>
+			<artifactId>craftbukkit1.16.4</artifactId>
+			<version>1.16.4</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/lib/spigot-1.16.4.jar
+			</systemPath>
+		</dependency>
 		<dependency>
 			<groupId>org.spigot1.16.2</groupId>
 			<artifactId>craftbukkit1.16.2</artifactId>
