@@ -68,7 +68,7 @@ Download the .JAR and put it on your path, or add it through maven
 <dependency>
       <groupId>masecla</groupId>
       <artifactId>VillagerGUIApi</artifactId>
-      <version>0.0.1-20200712.201012-2</version>
+      <version>{version}</version>
 </dependency>
 ```
 
