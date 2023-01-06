@@ -54,7 +54,7 @@ public class AdapterLoader {
 
 	public List<ZipEntry> getAdapterEntries(ZipFile f) {
 		List<ZipEntry> result = new ArrayList<>();
-		String name = "masecla/villager/adapters/instances/MerchantAdapter_" + getVersion() + ".class";
+		String name = "teammt/villagerguiapi/adapters/instances/MerchantAdapter_" + getVersion() + ".class";
 		if (f.getEntry(name) != null)
 			result.add(f.getEntry(name));
 		int i = 1;
@@ -77,8 +77,8 @@ public class AdapterLoader {
 		List<ZipEntry> correctClasses = getAdapterEntries(f);
 		for (ZipEntry correctClass : correctClasses) {
 			File tmpDir = new File(
-					File.separator + plugin.getDataFolder().getAbsolutePath() + File.separator + "masecla"
-							+ File.separator + "villager" + File.separator + "adapters" + File.separator + "instances");
+					File.separator + plugin.getDataFolder().getAbsolutePath() + File.separator + "teammt"
+							+ File.separator + "villagerguiapi" + File.separator + "adapters" + File.separator + "instances");
 			tmpDir.mkdirs();
 
 			System.out.println("Loading " + correctClass.getName());
