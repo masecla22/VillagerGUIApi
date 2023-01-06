@@ -19,20 +19,20 @@ Have you ever tried to create a custom Villager GUI without a villager in Spigot
   - 1.15, 1.15.1, 1.15.2
   - 1.16, 1.16.1, 1.16.2, 1.16.3, 1.16.4, 1.16.5
   - 1.17, 1.17.1
-
-# Versions planned:
-  - 1.4.2, 1.4.4, 
-  - Add some sort of emulation for 1.2, 1.1 and 1.0 (I need to find spigot versions for this)
+  - 1.18, 1.18.1, 1.18.2
+  - 1.19, 1.19.1, 1.19.2, 1.19.3
 
 # Goal of the project
-The goal of this library is to provide a unified API for developers to create Villagers GUI Containers and have the events to manipulate them and create different plugin with it. 
+The goal of this library is to provide a unified API for developers to create Villagers GUI Containers and have the events to manipulate them and create different plugins with it. 
 
 # How does it work?
 The way this project works is upon building it a certain package of classes is moved inside a zip inside a jar, which causes them to not load on startup of the server. Then the server loads an instance of the correct class depending on what version it is. The class is only loaded once on startup and is the only call to reflection ever made. Because of this, we have two advantages, our code remains readable, which helps up development (as no reflection is needed), and performance is really high. A disadvantage of this method is that we need to write a separate class for every single version so that the plugin knows what to load on startup.
 
 # Building
 Clone the repository, and configure the pom with the correct Spigot versions. Due to legal reasons I cannot provide them, but you can find them on the spigot website and other places.
-Once there, execute the command "mvn clean verify install" to build it and add it to the local maven repository. In order to create the final JAR ready to be used in servers you also need to run "./transform.sh"
+Once there, execute the command "mvn clean verify install" to build it and add it to the local maven repository.
+
+When that is done, you will find the .JAR inside the target folder.
 
 
 # Final note
@@ -60,13 +60,13 @@ Download the .JAR and place it inside the plugins folder
 Download the .JAR and put it on your path, or add it through maven
 ```xml
 <repository>
-      <id>masecla-repo</id>
-      <url>https://masecla.dev/nexus/repository/maven-snapshots/</url>
+      <id>teammt-plugins-public</id>
+      <url>https://masecla.dev/nexus/repository/mt-plugins-public/</url>
 </repository>
 ```
 ```xml
 <dependency>
-      <groupId>masecla</groupId>
+      <groupId>TeamMT</groupId>
       <artifactId>VillagerGUIApi</artifactId>
       <version>{version}</version>
 </dependency>
