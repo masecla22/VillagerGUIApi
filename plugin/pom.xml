@@ -95,7 +95,7 @@
 	<dependencies>
 		<dependency>
 			<groupId>TeamMT</groupId>
-			<artifactId>api</artifactId>
+			<artifactId>VillagerGUIApi.api</artifactId>
 			<version>1.0.0</version>
 		</dependency>
 

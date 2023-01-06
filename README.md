@@ -70,7 +70,7 @@ Download the .JAR and put it on your path, or add it through your dependency man
 ```xml
 <dependency>
       <groupId>TeamMT</groupId>
-      <artifactId>VillagerGUIApi</artifactId>
+      <artifactId>VillagerGUIApi.api</artifactId>
       <version>{version}</version>
 </dependency>
 ```
@@ -86,7 +86,7 @@ repositories {
 
 ```groovy
 dependencies {
-      compileOnly "TeamMT:VillagerGUIApi:{version}"
+      compileOnly "TeamMT:VillagerGUIApi.api:{version}"
 }
 ```
 

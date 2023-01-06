@@ -4,12 +4,8 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>TeamMT</groupId>
-    <artifactId>api</artifactId>
+    <artifactId>VillagerGUIApi.api</artifactId>
     <version>1.0.0</version>
-
-    <properties>
-        <maven.deploy.skip>true</maven.deploy.skip>
-    </properties>
 
     <parent>
         <groupId>TeamMT</groupId>
