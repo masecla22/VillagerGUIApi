@@ -93,10 +93,10 @@
     </build>
 
     <distributionManagement>
-        <snapshotRepository>
-            <id>nexus-snapshots</id>
-            <url>https://masecla.dev/nexus/repository/maven-snapshots/</url>
-        </snapshotRepository>
+        <repository>
+            <id>teammt-plugins-public</id>
+            <url>https://masecla.dev/nexus/repository/mt-plugins-public/</url>
+        </repository>
     </distributionManagement>
 
     <repositories>
