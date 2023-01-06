@@ -31,7 +31,7 @@ The goal of this library is to provide a unified API for developers to create Vi
 The way this project works is upon building it a certain package of classes is moved inside a zip inside a jar, which causes them to not load on startup of the server. Then the server loads an instance of the correct class depending on what version it is. The class is only loaded once on startup and is the only call to reflection ever made. Because of this, we have two advantages, our code remains readable, which helps up development (as no reflection is needed), and performance is really high. A disadvantage of this method is that we need to write a separate class for every single version so that the plugin knows what to load on startup.
 
 # Building
-Clone the repository, and populate the lib/ folder with the correct spigots. For those versions of spigot that don't exist simply rename a craftbukkit which you can find. All of them can be found on getbukkit.org. I have not included them in the repository since they are 600MB. If you are too lazy to download them all, add me on discord masecla22#4309.
+Clone the repository, and configure the pom with the correct Spigot versions. Due to legal reasons I cannot provide them, but you can find them on the spigot website and other places.
 Once there, execute the command "mvn clean verify install" to build it and add it to the local maven repository. In order to create the final JAR ready to be used in servers you also need to run "./transform.sh"
 
 
