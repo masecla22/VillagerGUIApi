@@ -76,16 +76,16 @@ Download the .JAR and put it on your path, or add it through maven
 ## Main classes
 You (as a developer), mostly need 2 classes in order to work with the api, them being
 ```
-masecla.villager.classes.VillagerInventory - Represents a player's inventory.
-masecla.villager.classes.VillagerTrade - Represents a single trade object.
+teammt.villagerguiapi.classes.VillagerInventory - Represents a player's inventory.
+teammt.villagerguiapi.classes.VillagerTrade - Represents a single trade object.
 ```
 ## Events
 Please, please, read the Notes section, otherwise you might have issues with these events.
 ```
-masecla.villager.events.VillagerInventoryCloseEvent - When an inventory gets closed
-masecla.villager.events.VillagerInventoryModifyEvent - When an inventory gets modified (read notes)
-masecla.villager.events.VillagerInventoryOpenEvent - When an inventory gets opened
-masecla.villager.events.VillagerTradeCompleteEvent - When a trade is completed.
+teammt.villagerguiapi.events.VillagerInventoryCloseEvent - When an inventory gets closed
+teammt.villagerguiapi.events.VillagerInventoryModifyEvent - When an inventory gets modified (read notes)
+teammt.villagerguiapi.events.VillagerInventoryOpenEvent - When an inventory gets opened
+teammt.villagerguiapi.events.VillagerTradeCompleteEvent - When a trade is completed.
 ```
 
 ## Example

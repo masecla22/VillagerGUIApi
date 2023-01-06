@@ -1,0 +1,4 @@
+name: VillagerGUIApi
+version: 1.0
+author: masecla22
+main: teammt.villagerguiapi.api.MainLoader
