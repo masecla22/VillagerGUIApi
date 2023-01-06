@@ -5,12 +5,12 @@
 
     <groupId>TeamMT</groupId>
     <artifactId>VillagerGUIApi.api</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
 
     <parent>
         <groupId>TeamMT</groupId>
         <artifactId>VillagerGUIApi</artifactId>
-        <version>1.0.0</version>
+        <version>1.0.1</version>
     </parent>
 
     <build>
