@@ -57,19 +57,37 @@ Some of the versions have inconsistent behaviour, which is all listed in the Not
 ### For server owners
 Download the .JAR and place it inside the plugins folder
 ### For developers
-Download the .JAR and put it on your path, or add it through maven
+Download the .JAR and put it on your path, or add it through your dependency manager.
+
+#### Maven
 ```xml
 <repository>
       <id>teammt-plugins-public</id>
       <url>https://masecla.dev/nexus/repository/mt-plugins-public/</url>
 </repository>
 ```
+
 ```xml
 <dependency>
       <groupId>TeamMT</groupId>
       <artifactId>VillagerGUIApi</artifactId>
       <version>{version}</version>
 </dependency>
+```
+
+#### Gradle
+```groovy
+repositories {
+      maven {
+            url "https://masecla.dev/nexus/repository/mt-plugins-public/"
+      }
+}
+```
+
+```groovy
+dependencies {
+      compileOnly "TeamMT:VillagerGUIApi:{version}"
+}
 ```
 
 # Developer API
