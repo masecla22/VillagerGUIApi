@@ -7,6 +7,10 @@
     <artifactId>v1_7_R3-adapter</artifactId>
     <version>1.0.0</version>
 
+    <properties>
+        <maven.deploy.skip>true</maven.deploy.skip>
+    </properties>
+
     <parent>
         <groupId>TeamMT</groupId>
         <artifactId>VillagerGUIApi</artifactId>
