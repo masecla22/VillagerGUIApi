@@ -2,6 +2,7 @@ target/
 
 /lib/
 /.settings/
+dependency-reduced-pom.xml
 
 
 .vscode
