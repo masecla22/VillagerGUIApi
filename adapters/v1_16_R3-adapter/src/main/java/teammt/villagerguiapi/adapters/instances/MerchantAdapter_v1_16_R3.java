@@ -29,7 +29,6 @@ public class MerchantAdapter_v1_16_R3 extends BaseAdapter implements Listener {
 
 	public MerchantAdapter_v1_16_R3(VillagerInventory toAdapt) {
 		super(toAdapt);
-		// TODO: Get rid of this magical value here somehow
 		Bukkit.getServer().getPluginManager().registerEvents(this,
 				Bukkit.getPluginManager().getPlugin("VillagerGUIApi"));
 		wrapped = new CraftMerchantCustom(toAdapt.getName());

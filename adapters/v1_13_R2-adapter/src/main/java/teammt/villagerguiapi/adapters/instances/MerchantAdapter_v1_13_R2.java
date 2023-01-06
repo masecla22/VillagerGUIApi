@@ -30,7 +30,6 @@ public class MerchantAdapter_v1_13_R2 extends BaseAdapter implements IMerchant {
 		
 	}
  
-	
 	@Override
 	public void a(MerchantRecipe arg0) {
 		VillagerTrade trd = new VillagerTrade(CraftItemStack.asBukkitCopy(arg0.getBuyItem1()),
