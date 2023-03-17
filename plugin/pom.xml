@@ -290,5 +290,10 @@
 			<artifactId>v1_19_R2-adapter</artifactId>
 			<version>1.0.1</version>
 		</dependency>
+		<dependency>
+			<groupId>TeamMT</groupId>
+			<artifactId>v1_19_R3-adapter</artifactId>
+			<version>1.0.1</version>
+		</dependency>
 	</dependencies>
 </project>
