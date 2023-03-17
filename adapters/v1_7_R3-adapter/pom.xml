@@ -5,7 +5,7 @@
 
     <groupId>TeamMT</groupId>
     <artifactId>v1_7_R3-adapter</artifactId>
-    <version>1.0.1</version>
+    <version>1.1.0</version>
 
     <properties>
         <maven.deploy.skip>true</maven.deploy.skip>
@@ -14,7 +14,7 @@
     <parent>
         <groupId>TeamMT</groupId>
         <artifactId>VillagerGUIApi</artifactId>
-        <version>1.0.1</version>
+        <version>1.1.0</version>
         <relativePath>../../pom.xml</relativePath>
     </parent>
 
@@ -27,7 +27,7 @@
         <dependency>
             <groupId>TeamMT</groupId>
             <artifactId>VillagerGUIApi.api</artifactId>
-            <version>1.0.1</version>
+            <version>1.1.0</version>
         </dependency>
     </dependencies>
 </project>

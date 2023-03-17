@@ -1,7 +1,7 @@
 command -v jar >/dev/null 2>&1 || { echo >&2 "I require jar but it's not installed.  Aborting."; exit 1; }
 command -v zip >/dev/null 2>&1 || { echo >&2 "I require zip but it's not installed.  Aborting."; exit 1; }
 
-version=1.0.1
+version=1.1.0
 
 # Enter the path containing the output of the maven build
 cd ../plugin/target
