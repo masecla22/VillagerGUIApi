@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>TeamMT</groupId>
-    <artifactId>v1_19_R3-adapter</artifactId>
+    <artifactId>v1_20_R1-adapter</artifactId>
     <version>1.2.0</version>
 
     <properties>
