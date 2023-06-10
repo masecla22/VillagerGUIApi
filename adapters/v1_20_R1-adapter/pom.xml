@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>TeamMT</groupId>
-    <artifactId>v1_7_R1-adapter</artifactId>
+    <artifactId>v1_19_R3-adapter</artifactId>
     <version>1.2.0</version>
 
     <properties>
@@ -22,7 +22,7 @@
         <dependency>
             <groupId>org.craftbukkit</groupId>
             <artifactId>nms-bukkit</artifactId>
-            <version>1.7.2</version>
+            <version>1.20</version>
         </dependency>
         <dependency>
             <groupId>TeamMT</groupId>
