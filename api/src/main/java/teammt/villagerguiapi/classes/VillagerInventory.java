@@ -1,12 +1,9 @@
 package teammt.villagerguiapi.classes;
 
-import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.List;
 
 import org.bukkit.entity.Player;
-
-import teammt.villagerguiapi.api.MainLoader;
 
 public class VillagerInventory {
 	private List<VillagerTrade> trades = new ArrayList<>();
@@ -44,14 +41,5 @@ public class VillagerInventory {
 
 	public void setName(String name) {
 		this.name = name;
-	}
-
-	public void open() {
-		try {
-			MainLoader.getAdapter().getConstructor(VillagerInventory.class).newInstance(this).openFor(forWho);
-		} catch (InstantiationException | IllegalAccessException | IllegalArgumentException | InvocationTargetException
-				| NoSuchMethodException | SecurityException e) {
-			e.printStackTrace();
-		}
 	}
 }
