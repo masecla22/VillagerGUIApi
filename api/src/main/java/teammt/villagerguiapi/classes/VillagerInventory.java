@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.bukkit.entity.Player;
+import teammt.villagerguiapi.api.AdapterLoader;
 
 public class VillagerInventory {
 	private List<VillagerTrade> trades = new ArrayList<>();
@@ -41,5 +42,9 @@ public class VillagerInventory {
 
 	public void setName(String name) {
 		this.name = name;
+	}
+
+	public void open() {
+		AdapterLoader.open(this);
 	}
 }
