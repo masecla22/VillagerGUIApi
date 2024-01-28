@@ -94,7 +94,7 @@
 		</dependency>
 		<dependency>
 			<groupId>TeamMT</groupId>
-			<artifactId>VillagerGUIApi.adapterBundle</artifactId>
+			<artifactId>VillagerGUIApi.adapter-bundle</artifactId>
 			<version>${project.version}</version>
 		</dependency>
 	</dependencies>

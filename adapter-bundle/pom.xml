@@ -3,7 +3,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>VillagerGUIApi.adapterBundle</artifactId>
+    <artifactId>VillagerGUIApi.adapter-bundle</artifactId>
 
     <parent>
         <groupId>TeamMT</groupId>
@@ -20,154 +20,155 @@
 
         <dependency>
             <groupId>TeamMT</groupId>
-            <artifactId>v1_7_R1-adapter</artifactId>
+            <artifactId>VillagerGUIApi.v1_7_R1-adapter</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>
             <groupId>TeamMT</groupId>
-            <artifactId>v1_7_R2-adapter</artifactId>
+            <artifactId>VillagerGUIApi.v1_7_R2-adapter</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>
             <groupId>TeamMT</groupId>
-            <artifactId>v1_7_R3-adapter</artifactId>
+            <artifactId>VillagerGUIApi.v1_7_R3-adapter</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>
             <groupId>TeamMT</groupId>
-            <artifactId>v1_7_R4-adapter</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>TeamMT</groupId>
-            <artifactId>v1_8_R1-adapter</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>TeamMT</groupId>
-            <artifactId>v1_8_R2-adapter</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>TeamMT</groupId>
-            <artifactId>v1_8_R3-adapter</artifactId>
+            <artifactId>VillagerGUIApi.v1_7_R4-adapter</artifactId>
             <version>${project.version}</version>
         </dependency>
 
         <dependency>
             <groupId>TeamMT</groupId>
-            <artifactId>v1_9_R1-adapter</artifactId>
+            <artifactId>VillagerGUIApi.v1_8_R1-adapter</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>
             <groupId>TeamMT</groupId>
-            <artifactId>v1_9_R2-adapter</artifactId>
+            <artifactId>VillagerGUIApi.v1_8_R2-adapter</artifactId>
             <version>${project.version}</version>
         </dependency>
-
         <dependency>
             <groupId>TeamMT</groupId>
-            <artifactId>v1_10_R1-adapter</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>TeamMT</groupId>
-            <artifactId>v1_11_R1-adapter</artifactId>
+            <artifactId>VillagerGUIApi.v1_8_R3-adapter</artifactId>
             <version>${project.version}</version>
         </dependency>
 
         <dependency>
             <groupId>TeamMT</groupId>
-            <artifactId>v1_12_R1-adapter</artifactId>
+            <artifactId>VillagerGUIApi.v1_9_R1-adapter</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>TeamMT</groupId>
+            <artifactId>VillagerGUIApi.v1_9_R2-adapter</artifactId>
             <version>${project.version}</version>
         </dependency>
 
         <dependency>
             <groupId>TeamMT</groupId>
-            <artifactId>v1_13_R1-adapter</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>TeamMT</groupId>
-            <artifactId>v1_13_R2-adapter</artifactId>
+            <artifactId>VillagerGUIApi.v1_10_R1-adapter</artifactId>
             <version>${project.version}</version>
         </dependency>
 
         <dependency>
             <groupId>TeamMT</groupId>
-            <artifactId>v1_14_R1-adapter</artifactId>
+            <artifactId>VillagerGUIApi.v1_11_R1-adapter</artifactId>
             <version>${project.version}</version>
         </dependency>
 
         <dependency>
             <groupId>TeamMT</groupId>
-            <artifactId>v1_15_R1-adapter</artifactId>
+            <artifactId>VillagerGUIApi.v1_12_R1-adapter</artifactId>
             <version>${project.version}</version>
         </dependency>
 
         <dependency>
             <groupId>TeamMT</groupId>
-            <artifactId>v1_16_R1-adapter</artifactId>
+            <artifactId>VillagerGUIApi.v1_13_R1-adapter</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>
             <groupId>TeamMT</groupId>
-            <artifactId>v1_16_R2-adapter</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>TeamMT</groupId>
-            <artifactId>v1_16_R3-adapter</artifactId>
+            <artifactId>VillagerGUIApi.v1_13_R2-adapter</artifactId>
             <version>${project.version}</version>
         </dependency>
 
         <dependency>
             <groupId>TeamMT</groupId>
-            <artifactId>v1_17_R1-adapter</artifactId>
+            <artifactId>VillagerGUIApi.v1_14_R1-adapter</artifactId>
             <version>${project.version}</version>
         </dependency>
 
         <dependency>
             <groupId>TeamMT</groupId>
-            <artifactId>v1_18_R1-adapter</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>TeamMT</groupId>
-            <artifactId>v1_18_R2-adapter</artifactId>
+            <artifactId>VillagerGUIApi.v1_15_R1-adapter</artifactId>
             <version>${project.version}</version>
         </dependency>
 
         <dependency>
             <groupId>TeamMT</groupId>
-            <artifactId>v1_19_R1-adapter</artifactId>
+            <artifactId>VillagerGUIApi.v1_16_R1-adapter</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>
             <groupId>TeamMT</groupId>
-            <artifactId>v1_19_R2-adapter</artifactId>
+            <artifactId>VillagerGUIApi.v1_16_R2-adapter</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>
             <groupId>TeamMT</groupId>
-            <artifactId>v1_19_R3-adapter</artifactId>
+            <artifactId>VillagerGUIApi.v1_16_R3-adapter</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>TeamMT</groupId>
+            <artifactId>VillagerGUIApi.v1_17_R1-adapter</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>TeamMT</groupId>
+            <artifactId>VillagerGUIApi.v1_18_R1-adapter</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>
             <groupId>TeamMT</groupId>
-            <artifactId>v1_20_R1-adapter</artifactId>
+            <artifactId>VillagerGUIApi.v1_18_R2-adapter</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>TeamMT</groupId>
+            <artifactId>VillagerGUIApi.v1_19_R1-adapter</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>
             <groupId>TeamMT</groupId>
-            <artifactId>v1_20_R2-adapter</artifactId>
+            <artifactId>VillagerGUIApi.v1_19_R2-adapter</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>
             <groupId>TeamMT</groupId>
-            <artifactId>v1_20_R3-adapter</artifactId>
+            <artifactId>VillagerGUIApi.v1_19_R3-adapter</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>TeamMT</groupId>
+            <artifactId>VillagerGUIApi.v1_20_R1-adapter</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>TeamMT</groupId>
+            <artifactId>VillagerGUIApi.v1_20_R2-adapter</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>TeamMT</groupId>
+            <artifactId>VillagerGUIApi.v1_20_R3-adapter</artifactId>
             <version>${project.version}</version>
         </dependency>
     </dependencies>
