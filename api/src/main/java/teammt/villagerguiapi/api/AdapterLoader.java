@@ -48,6 +48,10 @@ public class AdapterLoader {
     }
 
     public static void open(VillagerInventory inv) {
+        if (adapterClass == null) {
+            throw new RuntimeException("AdapterLoader has not been initialized");
+        }
+
         try {
             adapterClass.getConstructor(VillagerInventory.class).newInstance(inv).openFor(inv.getForWho());
         } catch (Exception e) {
