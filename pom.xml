@@ -18,6 +18,11 @@
         <module>plugin</module>
         <module>adapter-bundle</module>
 
+        <module>adapters/v1_7_R1-adapter</module>
+        <module>adapters/v1_7_R2-adapter</module>
+        <module>adapters/v1_7_R3-adapter</module>
+        <module>adapters/v1_7_R4-adapter</module>
+
         <module>adapters/v1_8_R1-adapter</module>
         <module>adapters/v1_8_R2-adapter</module>
         <module>adapters/v1_8_R3-adapter</module>

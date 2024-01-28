@@ -20,6 +20,27 @@
 
         <dependency>
             <groupId>TeamMT</groupId>
+            <artifactId>v1_7_R1-adapter</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>TeamMT</groupId>
+            <artifactId>v1_7_R2-adapter</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>TeamMT</groupId>
+            <artifactId>v1_7_R3-adapter</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>TeamMT</groupId>
+            <artifactId>v1_7_R4-adapter</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>TeamMT</groupId>
             <artifactId>v1_8_R1-adapter</artifactId>
             <version>${project.version}</version>
         </dependency>
