@@ -10,9 +10,9 @@ import java.util.Properties;
 
 public class AdapterLoader {
 
-    private static final Class<? extends BaseAdapter> adapterClass;
+    private static Class<? extends BaseAdapter> adapterClass;
 
-    static {
+    public static void init(){
         String version = getVersion();
         Class<? extends BaseAdapter> clazz;
         try {

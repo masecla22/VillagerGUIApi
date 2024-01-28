@@ -41,6 +41,13 @@
 				</executions>
 			</plugin>
 		</plugins>
+
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+				<filtering>true</filtering>
+			</resource>
+		</resources>
 	</build>
 
 	<distributionManagement>
@@ -49,4 +56,22 @@
 			<url>https://masecla.dev/nexus/repository/maven-snapshots/</url>
 		</snapshotRepository>
 	</distributionManagement>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.spigotmc</groupId>
+			<artifactId>spigot-api</artifactId>
+			<version>1.12.2-R0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>TeamMT</groupId>
+			<artifactId>VillagerGUIApi.api</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>TeamMT</groupId>
+			<artifactId>VillagerGUIApi.adapterBundle</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+	</dependencies>
 </project>
