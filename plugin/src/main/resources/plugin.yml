@@ -1,4 +1,4 @@
 name: VillagerGUIApi
 version: ${project.version}
 author: masecla22
-main: teammt.villagerguiapi.plugin.VillagerGuiApiPlugin
+main: teammt.villagerguiapi.plugin.VillagerGUIApiPlugin
