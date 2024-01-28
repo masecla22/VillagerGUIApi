@@ -30,7 +30,7 @@ public class MerchantAdapter_v1_15_R1 extends BaseAdapter implements Listener {
 	public MerchantAdapter_v1_15_R1(VillagerInventory toAdapt) {
 		super(toAdapt);
 		Bukkit.getServer().getPluginManager().registerEvents(this,
-				Bukkit.getPluginManager().getPlugin("VillagerGUIApi"));
+				org.bukkit.plugin.java.JavaPlugin.getProvidingPlugin(VillagerInventory.class));
 		wrapped = new CraftMerchantCustom(toAdapt.getName());
 		wrapped.setRecipes(toNMSRecipes());
 	}
