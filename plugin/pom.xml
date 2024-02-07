@@ -5,7 +5,7 @@
 
 	<groupId>TeamMT</groupId>
 	<artifactId>plugin</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.4.0</version>
 
 	<properties>
 		<maven.deploy.skip>true</maven.deploy.skip>
@@ -95,12 +95,8 @@
 			<url>https://libraries.minecraft.net</url>
 		</repository>
 		<repository>
-			<id>jitpack.io</id>
-			<url>https://jitpack.io</url>
-		</repository>
-		<repository>
-			<id>teammt-dependencies</id>
-			<url>https://masecla.dev/nexus/repository/mt-dependencies/repository</url>
+			<id>mt-dependencies-public</id>
+			<url>https://masecla.dev/nexus/repository/mt-dependencies-public/repository</url>
 		</repository>
 	</repositories>
 
