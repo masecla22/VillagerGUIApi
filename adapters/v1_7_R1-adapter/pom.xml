@@ -18,10 +18,9 @@
 
     <dependencies>
         <dependency>
-            <groupId>org.bukkit</groupId>
-            <artifactId>craftbukkit</artifactId>
-            <version>1.7.2-R0.4-SNAPSHOT</version>
-            <scope>provided</scope>
+            <groupId>org.craftbukkit</groupId>
+            <artifactId>nms-bukkit</artifactId>
+            <version>1.7.2</version>
         </dependency>
         <dependency>
             <groupId>TeamMT</groupId>

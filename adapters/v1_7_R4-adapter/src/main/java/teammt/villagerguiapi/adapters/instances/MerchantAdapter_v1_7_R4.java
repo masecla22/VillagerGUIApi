@@ -29,18 +29,11 @@ public class MerchantAdapter_v1_7_R4 extends BaseAdapter implements IMerchant {
 
 	@Override
 	public void a(MerchantRecipe arg0) {
-		try {
-			Field f = arg0.getClass().getDeclaredField("maxUses");
-			f.setAccessible(true);
-			int maxUses = f.getInt(arg0);
-			VillagerTrade trd = new VillagerTrade(CraftItemStack.asBukkitCopy(arg0.getBuyItem1()),
-					CraftItemStack.asBukkitCopy(arg0.getBuyItem2()), CraftItemStack.asBukkitCopy(arg0.getBuyItem3()),
-					maxUses);
-			VillagerTradeCompleteEvent event = new VillagerTradeCompleteEvent(toAdapt, toAdapt.getForWho(), trd);
-			Bukkit.getServer().getPluginManager().callEvent(event);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+		VillagerTrade trd = new VillagerTrade(CraftItemStack.asBukkitCopy(arg0.getBuyItem1()),
+				CraftItemStack.asBukkitCopy(arg0.getBuyItem2()), CraftItemStack.asBukkitCopy(arg0.getBuyItem3()),
+				arg0.maxUses);
+		VillagerTradeCompleteEvent event = new VillagerTradeCompleteEvent(toAdapt, toAdapt.getForWho(), trd);
+		Bukkit.getServer().getPluginManager().callEvent(event);
 	}
 
 	@SuppressWarnings("unchecked")
@@ -58,12 +51,7 @@ public class MerchantAdapter_v1_7_R4 extends BaseAdapter implements IMerchant {
 				itm2 = CraftItemStack.asNMSCopy(new ItemStack(Material.AIR));
 
 			toAdd = new MerchantRecipe(itm1, itm2, result);
-			try {
-				Field f = toAdd.getClass().getDeclaredField("maxUses");
-				f.setAccessible(true);
-				f.setInt(toAdd, trd.getMaxUses());
-			} catch (Exception e) {
-			}
+			toAdd.maxUses = trd.getMaxUses();
 
 			rpl.add(toAdd);
 		}

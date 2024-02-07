@@ -1,10 +1,13 @@
 package teammt.villagerguiapi.classes;
 
+import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.List;
 
 import org.bukkit.entity.Player;
 import teammt.villagerguiapi.api.AdapterLoader;
+
+import teammt.villagerguiapi.api.MainLoader;
 
 public class VillagerInventory {
 	private List<VillagerTrade> trades = new ArrayList<>();
