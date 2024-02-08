@@ -19,8 +19,6 @@ import net.minecraft.server.v1_7_R4.IMerchant;
 import net.minecraft.server.v1_7_R4.MerchantRecipe;
 import net.minecraft.server.v1_7_R4.MerchantRecipeList;
 
-import java.lang.reflect.Field;
-
 public class MerchantAdapter_v1_7_R4 extends BaseAdapter implements IMerchant {
 
 	public MerchantAdapter_v1_7_R4(VillagerInventory toAdapt) {
