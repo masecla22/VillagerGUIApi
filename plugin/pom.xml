@@ -76,6 +76,60 @@
 		</resources>
 	</build>
 
+	<profiles>
+		<profile>
+			<id>tests</id>
+			<build>
+				<plugins>
+					<plugin>
+						<artifactId>exec-maven-plugin</artifactId>
+						<version>3.0.0</version>
+						<groupId>org.codehaus.mojo</groupId>
+						<executions>
+							<execution>
+								<id>executor</id>
+								<phase>verify</phase>
+								<goals>
+									<goal>exec</goal>
+								</goals>
+								<configuration>
+									<executable>bash</executable>
+									<arguments>
+										<argument>-c</argument>
+										<argument>mkdir -p merger &amp;&amp;
+											for name in *.jar; do
+											if [ "$name" != original* ]; then
+											unzip -qq -o $name -d merger;
+											fi
+											done &amp;&amp;
+											rm ${project.build.finalName}.jar &amp;&amp;
+											jar -cf ${project.build.finalName}.jar -C merger .</argument>
+									</arguments>
+								</configuration>
+							</execution>
+						</executions>
+						<configuration>
+							<workingDirectory>${project.build.directory}</workingDirectory>
+						</configuration>
+					</plugin>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-jar-plugin</artifactId>
+						<version>3.3.0</version>
+						<executions>
+							<execution>
+								<goals>
+									<goal>test-jar</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
+
+
 	<distributionManagement>
 		<snapshotRepository>
 			<id>nexus-snapshots</id>
@@ -115,6 +169,12 @@
 			<groupId>TeamMT</groupId>
 			<artifactId>VillagerGUIApi.adapter-bundle</artifactId>
 			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>TeamMT</groupId>
+			<artifactId>TestingAgent</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+			<scope>test</scope>
 		</dependency>
 	</dependencies>
 </project>
