@@ -13,7 +13,7 @@
     <parent>
         <groupId>TeamMT</groupId>
         <artifactId>VillagerGUIApi</artifactId>
-        <version>1.4.0</version>
+        <version>1.5.0</version>
         <relativePath>../../pom.xml</relativePath>
     </parent>
 
