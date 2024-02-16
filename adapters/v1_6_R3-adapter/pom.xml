@@ -64,7 +64,7 @@
         <dependency>
             <groupId>TeamMT</groupId>
             <artifactId>VillagerGUIApi.api</artifactId>
-            <version>1.4.0</version>
+            <version>${project.version}</version>
         </dependency>
     </dependencies>
 </project>
