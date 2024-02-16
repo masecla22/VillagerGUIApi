@@ -1,6 +1,8 @@
 package teammt.villagerguiapi.api;
 
 import org.bukkit.Bukkit;
+
+import lombok.Getter;
 import teammt.villagerguiapi.adapters.BaseAdapter;
 import teammt.villagerguiapi.classes.VillagerInventory;
 
@@ -10,6 +12,7 @@ import java.util.Properties;
 
 public class AdapterLoader {
 
+    @Getter
     private static Class<? extends BaseAdapter> adapterClass;
 
     public static void init(){
