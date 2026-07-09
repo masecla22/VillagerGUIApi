@@ -1,0 +1,34 @@
+// VillagerGUIApi plugin — the deployable jar. Shades every TeamMT module (api + adapter-bundle +
+// all version adapters) with NO relocation, mirroring the Maven <artifactSet><include>TeamMT:*</include>.
+plugins {
+    id 'com.gradleup.shadow' version '9.0.0'
+}
+
+dependencies {
+    implementation project(':api')
+    implementation project(':adapter-bundle')
+}
+
+// TeamMT:TestingAgent:0.0.1-SNAPSHOT jar is not available locally; skip tests.
+sourceSets { test { java { srcDirs = [] } } }
+
+// plugin.yml carries `version: ${project.version}`; expand it at resource-processing time.
+processResources {
+    filesMatching('plugin.yml') {
+        expand(project: [version: project.version])
+    }
+}
+
+shadowJar {
+    // Maven finalName was ${project.parent.artifactId}-${project.parent.version} => VillagerGUIApi-1.5.0.
+    archiveBaseName = 'VillagerGUIApi'
+    archiveClassifier = ''
+}
+
+// Make the shaded jar the build output (replaces the thin jar).
+jar {
+    enabled = false
+}
+tasks.named('build') {
+    dependsOn tasks.named('shadowJar')
+}

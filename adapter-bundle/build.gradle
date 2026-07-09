@@ -1,0 +1,8 @@
+// VillagerGUIApi.adapter-bundle — aggregates the API and every version adapter into one module
+// so the plugin can depend on a single artifact (mirrors the Maven adapter-bundle pom).
+def adapterProjects = rootProject.subprojects.findAll { it.name.endsWith('-adapter') }
+
+dependencies {
+    implementation project(':api')
+    adapterProjects.each { implementation project(it.path) }
+}

@@ -6,3 +6,8 @@ dependency-reduced-pom.xml
 
 
 .vscode
+# Gradle
+.gradle/
+build/
+bin/
+!gradle/wrapper/gradle-wrapper.jar
