@@ -132,8 +132,8 @@
 
 	<distributionManagement>
 		<snapshotRepository>
-			<id>nexus-snapshots</id>
-			<url>https://masecla.dev/nexus/repository/maven-snapshots/</url>
+			<id>mt-plugins-public</id>
+			<url>https://nexus.teammt.dev/repository/mt-plugins-public/</url>
 		</snapshotRepository>
 	</distributionManagement>
 
@@ -150,7 +150,7 @@
 		</repository>
 		<repository>
 			<id>mt-dependencies-public</id>
-			<url>https://masecla.dev/nexus/repository/mt-dependencies-public/repository</url>
+			<url>https://nexus.teammt.dev/repository/mt-dependencies-public/</url>
 		</repository>
 	</repositories>
 

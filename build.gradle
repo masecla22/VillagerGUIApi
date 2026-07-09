@@ -27,10 +27,8 @@ subprojects {
     repositories {
         mavenLocal()
         mavenCentral()
-        maven {
-            url 'https://nexus.teammt.dev/repository/maven-public/'
-            content { includeGroupByRegex 'dev\\.teammt\\..*' }
-        }
+        // nms-bukkit lives here; maven-public denies reads (403).
+        maven { url 'https://nexus.teammt.dev/repository/mt-dependencies-public/' }
         maven { url 'https://hub.spigotmc.org/nexus/content/repositories/snapshots/' }
         maven { url 'https://libraries.minecraft.net/' }
         maven { url 'https://jitpack.io' }
