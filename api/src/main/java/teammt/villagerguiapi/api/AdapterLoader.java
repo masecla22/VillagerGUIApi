@@ -22,7 +22,9 @@ public class AdapterLoader {
             Class<?> c = Class.forName("teammt.villagerguiapi.adapters.instances.MerchantAdapter_" + version);
             clazz = c.asSubclass(BaseAdapter.class);
         } catch (ClassNotFoundException e) {
-            throw new RuntimeException("Could not find adapter for " + getVersion(), e);
+            // No version-specific NMS adapter — fall back to the pure Bukkit-API
+            // adapter (1.20.5+, 1.21.x, and the 26.x scheme onwards).
+            clazz = teammt.villagerguiapi.adapters.instances.MerchantAdapter_api.class;
         }
         adapterClass = clazz;
     }
