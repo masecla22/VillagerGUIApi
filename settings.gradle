@@ -5,10 +5,6 @@ pluginManagement {
         mavenLocal()
         maven {
             url 'https://nexus.teammt.dev/repository/mt-plugins-public/'
-            credentials {
-                username = providers.gradleProperty('teammtNexusUsername').orNull
-                password = providers.gradleProperty('teammtNexusPassword').orNull
-            }
         }
     }
 }
